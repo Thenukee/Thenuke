@@ -66,7 +66,6 @@ a:hover {
   cursor: default;
 }
 
-/* HAMBURGER MENU */
 
 #hamburger-nav {
   display: none;
@@ -146,7 +145,6 @@ a:hover {
   transform: none;
 }
 
-/* SECTIONS */
 
 section {
   padding-top: 4vh;
@@ -160,7 +158,6 @@ section {
   display: flex;
 }
 
-/* PROFILE SECTION */
 
 #profile {
   display: flex;
@@ -206,14 +203,13 @@ section {
   gap: 1rem;
 }
 
-/* ICONS */
+
 
 .icon {
   cursor: pointer;
   height: 2rem;
 }
 
-/* BUTTONS */
 
 .btn-container {
   display: flex;
@@ -261,7 +257,6 @@ section {
   gap: 1rem;
 }
 
-/* ABOUT SECTION */
 
 #about {
   position: relative;
@@ -314,7 +309,6 @@ section {
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
@@ -353,7 +347,6 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
 
 #projects {
   position: relative;
@@ -421,7 +414,6 @@ article .icon {
 }
 
 
-/* ----- NAVIGATION BAR ----- */
 nav{
   position: fixed;
   display: flex;
@@ -488,15 +480,14 @@ nav{
 }
 
 
-* ----- VARIABLES ----- */
 :root{
     --body-color: rgb(250, 250, 250);
     --color-white: rgb(255, 255, 255);
 
     --text-color-second: rgb(68, 68, 68);
-    --text-color-third: rgb(30, 159, 171);
+    --text-color-third: rgb(9, 46, 49);
 
-    --first-color: rgb(110, 87, 224);
+    --first-color: rgb(77, 69, 118);
     --first-color-hover: rgb(40, 91, 212);
 
     --second-color: rgb(0, 201, 255);
@@ -519,7 +510,7 @@ footer{
   flex-direction: column;
   row-gap: 30px;
   background: #F8F8F8;
-  padding-block: 40px 60px;
+  padding-block: 40px 20px;
 }
 .top-footer p{
   font-size: 25px;

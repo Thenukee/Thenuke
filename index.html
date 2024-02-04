@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+     <!-- --------- FAVICON ---------- -->
+     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+  </head>
+  <body>
+     <!-- --------------- HEADER --------------- -->
+    <style>
+      #header {
+        background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+        /* Add other styles for the navigation bar */
+      }
+    </style>
+    <nav id="header" style="background-color: rgba(228, 227, 239, 0.89);">
+      <div class="nav-logo">
+          <p class="nav-name">Thenuke<span class="typedText"></span></p>
+          <span>.</span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+              <li class="nav_list">
+                  <a href="#top" class="nav-link active-link">Home</a>
+                  
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="#about" class="nav-link">About</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="#projects" class="nav-link">Projects</a>
+                  <div class="circle"></div>
+              </li>
+              <li class="nav_list">
+                  <a href="#contact" class="nav-link">Contact</a>
+                  <div class="circle"></div>
+              </li>
+          </ul>
+      </div>
+      <div class="nav-button">
+          <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+      </div>
+      <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Thenuke Wijesinghe</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt=" profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Thenuke Wijesinghe</h1>
+        <p class="section__text__p2">Computer Science Undergrad</p>
+        <div class="btn-container"> <!--
+         <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          -->
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            
+
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/medium.png"
+            alt="My medium profile"
+            class="icon"
+            onclick="location.href='https://thenukewijesinghe.medium.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Thenukee'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2nd year CS Undergrad <br />I'm invested in Infomation Security</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Currenty following .. Bachelors in computer Science Degree</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Welcome to my portfolio! I am passionate about the ever-evolving realm of Information Security, with a specific focus on Digital Forensics. As a dedicated professional in this field, I thrive on the challenges of unraveling digital mysteries and uncovering evidence to secure digital landscapes. My journey has equipped me with a diverse skill set, ranging from cyber threat analysis to forensic investigation techniques. With a relentless pursuit of knowledge and a commitment to staying ahead of the cybersecurity curve, I am poised to contribute valuable insights and solutions to the dynamic world of Information Security. Explore my portfolio to delve into my experiences and discover how I bring a unique blend of technical expertise and strategic thinking to the realm of digital forensics.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#footer'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+  
+
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>goLan</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PowerShell</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='#footer'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">40-bcs-0006@kdu.ac.lk</a></p>
+        </div>
+        
+      </div>
+    </section>
+      <footer>
+        <div class="top-footer">
+            <p>John Doe .</p>
+        </div>
+        <section id="footer">
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer_menu_list">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#about">About</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="footer_menu_list">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-social-icons"> <!--still not working -->
+            <div class="icon"><i class="uil uil-instagram"></i></div>
+            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            <div class="icon"><i class="uil uil-dribbble"></i></div>
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">thenukewijesinghe</a> - All rights reserved</p>
+        </div>
+        </section>
+    </footer>
+       
+       
+   
+
+
+   
+    <script src="assets/script.js"></script>
+  </body>
+</html>

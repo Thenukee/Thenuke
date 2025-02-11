@@ -184,16 +184,19 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  white-space: pre-wrap;
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  white-space: pre-wrap;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+  white-space: pre-wrap;
 }
 
 #socials-container {
@@ -536,5 +539,66 @@ footer{
 .bottom-footer{
   font-size: 14px;
   margin-top: 10px;
+}
+
+/* NEW ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 1s ease-in-out both;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slide-up {
+  animation: slideUp 0.8s ease-out both;
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  80% { transform: translateY(-5px); }
+}
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* GLOWING CURSOR */
+.glowing-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+/* FIREWORK EFFECT */
+.firework-particle {
+  position: fixed;
+  pointer-events: none;
+  width: 5px;
+  height: 5px;
+  background: #ffcc00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: firework 800ms ease-out forwards;
+}
+@keyframes firework {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--dx)*1px), calc(var(--dy)*1px)) scale(2);
+  }
 }
 
